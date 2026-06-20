@@ -1,7 +1,18 @@
 import React from "react";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    alert("Login Successful!");
+
+    navigate("/appointment");
+  };
+
   return (
     <div
       style={{
@@ -27,7 +38,7 @@ function Login() {
           margin: "0 auto",
         }}
       >
-        <form>
+        <form onSubmit={handleLogin}>
           <input
             type="email"
             required
@@ -45,6 +56,7 @@ function Login() {
           <input
             type="password"
             required
+            minLength="6"
             placeholder="Password"
             style={{
               width: "100%",

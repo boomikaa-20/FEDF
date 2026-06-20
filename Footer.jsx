@@ -10,7 +10,15 @@ function Footer() {
         padding: "15px",
       }}
     >
-      © 2026 Passport Application Assistance Portal
+      <div>
+  <h3>
+    © 2026 Passport Application Assistance Portal
+  </h3>
+
+  <p>
+    Government Service Assistance System
+  </p>
+</div>
     </footer>
   );
 }
